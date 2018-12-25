@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+
+    <Button
+        android:id="@+id/btnW"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#66CDAA"
+        android:text="W"
+        app:layout_constraintEnd_toEndOf="@+id/btnS"
+        app:layout_constraintStart_toStartOf="@+id/btnS"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+    <Button
+        android:id="@+id/btnA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#66CDAA"
+        android:text="A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnD"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="53dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="21dp"
+        android:background="#66CDAA"
+        android:text="D"
+        app:layout_constraintEnd_toStartOf="@+id/btnCon"
+        app:layout_constraintStart_toStartOf="@+id/btnW"
+        app:layout_constraintTop_toBottomOf="@+id/btnW" />
+
+    <Button
+        android:id="@+id/btnS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="21dp"
+        android:background="#66CDAA"
+        android:text="S"
+        app:layout_constraintStart_toStartOf="@+id/btnA"
+        app:layout_constraintTop_toBottomOf="@+id/btnA" />
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="34dp"
+        android:background="#EE6363"
+        android:text="STOP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCon" />
+
+    <Button
+        android:id="@+id/btnCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginEnd="35dp"
+        android:background="#66CDAA"
+        android:text="CONNECT"
+        app:layout_constraintBottom_toBottomOf="@+id/btnD"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sbRadius"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="61dp"
+        android:layout_marginEnd="8dp"
+        android:max="2000"
+        android:progress="1000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvRadius"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <SeekBar
+        android:id="@+id/sbVelocity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:max="500"
+        android:progress="250"
+        app:layout_constraintEnd_toEndOf="@+id/sbRadius"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvVelocity" />
+
+    <TextView
+        android:id="@+id/tvRadius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:text="Radius:0"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sbRadius" />
+
+    <TextView
+        android:id="@+id/tvVelocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:layout_marginStart="8dp"
+        android:text="Velocity:0"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvRadius"
+        app:layout_constraintStart_toEndOf="@+id/sbVelocity" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="0dp"
+        android:layout_height="85dp"
+        android:text=""
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
